@@ -1,0 +1,229 @@
+@font-face {
+    font-family: general;
+    src: url(/frontend/assets/fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf);
+}
+
+*{
+    font-family: general;
+}
+
+body{
+    background-image: url(../assets/img/login/fondoLogin.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    height: 100vh;
+    margin: 0;
+}
+
+#headerLogin{
+    background-image: url(../assets/img/login/cesta-compra.jpg);
+    height: 15rem;
+    width: -webkit-fill-available;
+    background-position: bottom;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#headerLogin button{
+    position: absolute;
+    bottom: 0;
+}
+
+#navHeaderLogin{
+    height: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    align-items: center;
+    background: rgba(5,7,12,0.40);
+    position: fixed;
+    width: -webkit-fill-available;
+}
+
+#navHeaderLogin a{
+    color: #f9f9f9;
+    font-weight: bold;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+#navHeaderLogin img{
+    width: 3rem;
+}
+
+.messageBanner{
+    position: absolute;
+    bottom: 0;
+    right: 35px;
+    width: 150px;
+    font-size: x-large;
+    color: #f9f9f9;
+    font-weight: bold;
+}
+
+
+.imgBanner{
+    width: 40vw;
+}
+
+.bannerInfo{
+    display: flex;
+    width: -webkit-fill-available;
+    flex-direction: column;
+}
+
+.infoBanner{
+    display: flex;
+}
+
+.infoBanner p{
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.messageBannerBody{
+
+    color: #f9f9f9;
+    font-weight: bolder;
+    font-size: x-large;
+    align-items: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    text-align: center;
+
+}
+
+.messageParagraph{
+    color: #f9f9f9;
+   
+}
+
+.decorationBarLeft{
+    height: 5px;
+    background-color: #f9f9f9;
+    width: 70%;
+}
+
+.decorationBarRigth{
+    height: 5px;
+    background-color: #f9f9f9;
+    width: 70%;
+    margin-left: auto;
+}
+
+.btnLandpage{
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    color: gray;
+    margin: 10px;
+    width: 97px;
+}
+
+#landPageFooter{
+    display: flex;
+    width: -webkit-fill-available;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin: 4rem 0.5rem ;
+    padding-bottom: 2rem;
+}
+
+#landPageFooter img{
+    width: 4rem;
+}
+
+#landPageFooter p{
+    color: #f9f9f9;
+    font-size: 10px;
+    margin: 5px 0;
+    padding: 0;
+}
+
+.btnLandpage a{
+    color: gray;
+    text-decoration: none;
+}
+
+@media(min-width:992px){
+
+    .messageParagraph{
+        color: #f9f9f9;
+       font-size: 3vh;
+    }
+
+    .messageBannerBody{
+
+        color: #f9f9f9;
+        font-weight: bolder;
+        font-size: x-large;
+        align-items: center;
+        padding-left: 8%;
+        padding-right: 8%;
+        text-align: center;
+        font-size: 5vh;
+    
+    }
+
+    #headerLogin{
+        background-image: url(../assets/img/login/cesta-compra.jpg);
+        height: 50vh;
+        width: -webkit-fill-available;
+        background-position: bottom;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .messageBanner{
+        position: absolute;
+        bottom: 0;
+        right: 11vw;
+        font-size: x-large;
+        color: #f9f9f9;
+        font-weight: bold;
+        width: 40vw;
+        font-size: 7vh;
+    }
+
+    #navHeaderLogin a{
+        color: #f9f9f9;
+        font-weight: bold;
+        font-size: 2.5vh;
+        text-decoration: none;
+    }
+
+    #navHeaderLogin{
+        height: 3rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        align-items: center;
+        background: rgba(5,7,12,0.40);
+        position: fixed;
+        width: -webkit-fill-available;
+        padding: 0 2vw;
+    }
+
+
+    .btnLandpage{
+        background-color: rgb(249, 249, 249);
+        border: none;
+        border-radius: 20px;
+        padding: 5px;
+        color: gray;
+        margin: 10px;
+        width: 11vw;
+        font-size: 2vh;
+    }
+    
+}

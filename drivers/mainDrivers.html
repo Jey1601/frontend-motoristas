@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBuy</title>
+    <link rel="stylesheet" href="./css/mainDrivers.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+</head>
+
+<body>
+
+
+    <header>
+        <img class="imgNameLogo" src="./assets/img/logoNombre.png" alt="">
+        <nav>
+            
+            <div>
+                <button class="btnHeaderActive"><a href="./mainDrivers.html">Ordenes</a> </button>
+                <button class="btnHeaderUnactive"><a href="./takedOders.html">Tomadas</a> </button>
+                <button class="btnHeaderUnactive "><a href="./pendingOrders.html">Pendientes</a> </button>
+            </div>
+            <button onclick="abrirEntregas()"><i class="fa-solid fa-truck" style="color: #f9f9f9;"></i></button>
+        </nav>
+    </header>
+
+
+    <main id="panelOrders">
+        <div id="liveAlertPlaceholder"></div>
+        <div class="ordersHeader ">
+            <p class="ordersHeaderItem">#Orden</p>
+            <p class="ordersHeaderItem">Nombre</p>
+            <p class="ordersHeaderItem">Apellidos</p>
+            <p class="ordersHeaderItem">Opciones</p>
+        </div>
+
+        <div class="freeOrderCard">
+            <p class="itemOrderCard">0000</p>
+            <p class="itemOrderCard">Juan Pedro</p>
+            <p class="itemOrderCard"> Fernandez Mendoza</p>
+            <button data-bs-toggle="modal" data-bs-target="#detailOrderModal"><i class="fa-solid fa-eye"
+                    style="color: #8c8c8c;"></i></button>
+        </div>
+
+
+
+
+
+    </main>
+
+
+
+
+
+    <footer>
+        <img class="logo" src="../landPage/assets/img/logoIcon.png" alt="">
+        <div>
+            <a href="">Clientes</a>
+            <a href="">Drivers</a>
+            <a href="">Empresas</a>
+        </div>
+        <div>
+            <p>Contacto</p>
+            <a href="">Centro de ayuda</a>
+            <a href="">Terminos y condiciones</a>
+            <a href="">Politicas de privacidad y seguridad</a>
+        </div>
+
+        <div>
+            <p>Follow us</p>
+            <div>
+                <i class="fa-brands fa-instagram" style="color: #f9f9f9;"></i>
+                <i class="fa-brands fa-twitter" style="color: #f9f9f9;"></i>
+                <i class="fa-brands fa-facebook-f" style="color: #f9f9f9;"></i>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--Modal Detalle de orden-->
+    <div class="modal fade" id="detailOrderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Detalle de orden</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <section id="infoClientModal">
+                        <div>
+                            <label for="">#orden:</label>
+                            <div>
+                                <p class="itemInfoClient" id="orden"></p>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="">Teléfono:</label>
+                            <div>
+                                <p class="itemInfoClient" id="telefonoClient"></p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="">Nombre:</label>
+                            <div>
+                                <p class="itemInfoClient" id="nombreClient"></p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="">Apellidos:</label>
+                            <div>
+                                <p class="itemInfoClient" id="apellidoClient"></p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="">Dirección:</label>
+                            <div>
+                                <p class="itemInfoClient" id="direccionClient"></p>
+                            </div>
+                        </div>
+                    </section>
+                    <p style="color: gray; margin-top: 1rem;">Detalle:</p>
+                    <section class="containerTable">
+                        
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">Empresa</th>
+                                    <th scope="col">Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cuerpoTabla">
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Prducto 1</td>
+                                    <td>Empresa 1</td>
+                                    <td>2</td>
+                                </tr>
+                                
+                               
+
+                            </tbody>
+                        </table>
+
+                    </section>
+                    
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div id="mapa" style="width: 100%; height: 350px; margin-top: 10px;">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>  
+                
+                <div id="footerDetalle" class="modal-footer">
+                    <button type="button" class="btn-proceed" data-bs-dismiss="modal" onclick="actualizarOrden()">Tomar</button>
+                    <button type="button" class="btn-cancel " data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/75b6a1d3df.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <SCript src="./js/mainDrivers.js" ></SCript>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=iniciarMapa"></script>
+    
+
+</body>
+
+</html>

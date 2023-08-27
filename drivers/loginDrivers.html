@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBuy</title>
+    <link rel="stylesheet" href="./css/loginDrivers.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <section>
+        <div id="liveAlertPlaceholder"></div>
+        <img class="imgNameLogo" src="./assets/img/logoNombre.png" alt="">
+        <form action="" id="DriversloginForm">
+
+
+            <label class="formText" for="loginDriversUser">Email</label>
+            <input id="loginDriversUser" type="email">
+
+            <label class="formText" for="loginDriversPassword">Contraseña</label>
+            <input id="loginDriversPassword" type="password">
+
+            <a class="formText" href="">Olvidó su contraseña?</a>
+            <button onclick="login(event)" type="submit">Ingresar</button>
+
+        </form>
+    </section>
+    <section>
+        <button type="button" class="formText link registerButton" data-bs-toggle="modal"
+            data-bs-target="#signUpDriversModal">Registrate</button>
+
+        <div id="imgLoginDrivers">
+            <img src="./assets/img/imgLoginMotorista.png" alt="">
+        </div>
+    </section>
+
+    <!---MODAL DE REGISTRO-->
+    <div class="modal fade" id="signUpDriversModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h5 class="singUpTitle">Formulario De Registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="registroAlert"></div>
+                <div class="modal-body">
+                    <form action="" id="driversSignUpForm" class="container-fluid">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="nombreRegistro">Nombre</label>
+                            </div>
+                            <div class="col-8">
+                                <input id="nombreRegistro" type="text" name="">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="apellidoRegistro">Apellidos</label>
+                            </div>
+                            <div class="col-8">
+                                <input id="apellidoRegistro" type="text" name="">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="IndentificacionRegistro">Indentificación</label>
+                            </div>
+                            <div class="col-8">
+                                <input id="IndentificacionRegistro" type="text" name="">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="direccionRegistro">Dirección</label>
+                            </div>
+                            <div class="col-8">
+                                <textarea id="direccionRegistro" name="" id="" cols="20" rows="10"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="telefonoRegistro">Teléfono</label>
+                            </div>
+                            <div class="col-8">
+                                <input id="telefonoRegistro" type="text" name="">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="emailRegistro">Email</label>
+                            </div>
+                            <div class="col-8">
+                                <input id="emailRegistro" type="email" name="">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="placaRegistro">Placa</label>
+                            </div>
+                            <div class="col-8">
+                                <input id="placaRegistro" type="text" name="">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="constrasenaRegistro">Contraseña</label>
+                            </div>
+                            <div class="col-8">
+                                <input oninput="verificarContrasena()" id="constrasenaRegistro" type="password" name="">
+                                <input oninput="verificarContrasena()" id="constrasenaRegistroConfirmacion" type="password"
+                                    placeholder="Confirma tu contraseña">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="enviar" type="button" class="btn-invalid">Enviar</button>
+                    <button type="button" class="btn-cancel " data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./js/loginDrivers.js"></script>
+</body>
+
+</html>

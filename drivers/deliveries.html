@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBuy</title>
+    <link rel="stylesheet" href="./css/deliveries.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+        <img class="imgNameLogo" src="./assets/img/logoNombre.png" alt="">
+        <nav>
+           <!-- <button onclick="regresar()"><i class="fa-solid fa-arrow-left" style="color: #f9f9f9;"></i></button> -->
+            
+            <h5>Mis entregas</h5>
+            
+        </nav>
+    </header>
+    <main id="panelOrders">
+        <div class="ordersHeader ">
+            <p class="ordersHeaderItem">#Orden</p>
+            <p class="ordersHeaderItem">Nombre</p>
+            <p class="ordersHeaderItem">Apellidos</p>
+            <p class="ordersHeaderItem">Opciones</p>
+        </div>
+
+        <div>
+            <div class="takeOrderCard">
+                <p class="itemOrderCard">0000</p>
+                <p class="itemOrderCard">Juan Pedro</p>
+                <p class="itemOrderCard"> Fernandez Mendoza</p>
+                <button data-bs-toggle="collapse" href="#hola" role="button" aria-expanded="false"
+                    aria-controls="hola"><i class="fa-solid fa-eye" style="color: #8c8c8c;"></i></button>
+            </div>
+            <div class="collapse" id="hola">
+                <div class="card card-body">
+                    
+                    <button data-bs-toggle="modal" data-bs-target="#invoiceModal" type="button" class="btn-proceed">Ver Factura</button>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <img class="logo" src="../landPage/assets/img/logoIcon.png" alt="">
+        <div>
+            <a href="">Clientes</a>
+            <a href="">Drivers</a>
+            <a href="">Empresas</a>
+        </div>
+        <div>
+            <p>Contacto</p>
+            <a href="">Centro de ayuda</a>
+            <a href="">Terminos y condiciones</a>
+            <a href="">Politicas de privacidad y seguridad</a>
+        </div>
+
+        <div>
+            <p>Follow us</p>
+            <div>
+                <i class="fa-brands fa-instagram" style="color: #f9f9f9;"></i>
+                <i class="fa-brands fa-twitter" style="color: #f9f9f9;"></i>
+                <i class="fa-brands fa-facebook-f" style="color: #f9f9f9;"></i>
+            </div>
+        </div>
+    </footer>
+
+      <!--Modal Factura-->
+    <!-- Modal -->
+    <div class="modal fade" id="invoiceModal" tabindex="-1" aria-labelledby="invoiceModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" >Factura</h5>
+                    <img src="./assets/img/logoIcon.png" alt="">
+                    <button  onclick="renderizarOrdenes()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <section id="infoClientModal">
+                        <div>
+                            <label for="numeroFactura">#Factura:</label>
+                            <div>
+                                <p id="numeroFactura"  class="itemInfoClient"></p>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="emailFactura">Email:</label>
+                            <div>
+                                <p id="emailFactura" class="itemInfoClient"></p>
+                            </div>
+                        </div>
+                    
+                        <div>
+                            <label for="nombreFactura">Nombre:</label>
+                            <div>
+                                <p id="nombreFactura" class="itemInfoClient"></p>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="direccionFactura">Dirección:</label>
+                            <div>
+                                <p id="direccionFactura" class="itemInfoClient"></p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="containerTable">
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Decripción</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Descuentos</th>
+                                    <th scope="col">Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cuerpoFactura">
+                                <tr>
+                                   
+                                    <td>Prducto 1</td>
+                                    <td>2</td>
+                                    <td>19.99</td>
+                                    <td>0</td>
+                                    <td>39.98</td>
+                                </tr>
+                                <tr>
+                                   
+                                    <td>Prducto 1</td>
+                                    <td>2</td>
+                                    <td>19.99</td>
+                                    <td>0</td>
+                                    <td>39.98</td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td>Prducto 1</td>
+                                    <td>2</td>
+                                    <td>19.99</td>
+                                    <td>0</td>
+                                    <td>39.98</td>
+                                </tr>
+                                <tr>
+                                   
+                                    <td>Prducto 1</td>
+                                    <td>2</td>
+                                    <td>19.99</td>
+                                    <td>0</td>
+                                    <td>39.98</td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td>Prducto 1</td>
+                                    <td>2</td>
+                                    <td>19.99</td>
+                                    <td>0</td>
+                                    <td>39.98</td>
+                                </tr>
+                                <tr>
+                                   
+                                    <td>Prducto 1</td>
+                                    <td>2</td>
+                                    <td>19.99</td>
+                                    <td>0</td>
+                                    <td>39.98</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">Subtotal</td>
+                                    <td>119.94</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">Comisión administración 10%</td>
+                                    <td>119.94</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">Comisión Motoristas 15%</td>
+                                    <td>119.94</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">Subtotal Comisiones</td>
+                                    <td>119.94</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">ISV 15%</td>
+                                    <td>119.94</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">Total</td>
+                                    <td>119.94</td>
+                                </tr>
+                            
+                            </tbody>
+                        </table>
+
+                    </section>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button"  onclick="renderizarOrdenes()" data-bs-dismiss="modal" class="btn-proceed">cerrar</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+      
+
+    <script src="https://kit.fontawesome.com/75b6a1d3df.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <Script src="./js/deliveries.js"></Script>
+
+</body>
+
+</html>

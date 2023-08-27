@@ -1,0 +1,159 @@
+@font-face {
+    font-family: general;
+    src: url(/frontend/assets/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf);
+}
+
+*{
+    font-family: general;
+}
+
+body{
+    background-color: #5aa9e6 !important;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: -webkit-fill-available;
+}
+
+section{
+    height: 50vh;
+}
+
+body section:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3rem;
+    width: -webkit-fill-available;
+    padding-top: 9vh;
+}
+
+body section:last-child{
+    position: relative;
+    overflow: hidden;
+   
+}
+
+.registerButton{
+    border: none;
+    background: none;
+}
+
+.link{
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+
+
+#DriversloginForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: -webkit-fill-available;
+}
+
+#DriversloginForm input{
+    border: none;
+    border-radius: 10px;
+    height: 25px;
+    width: -webkit-fill-available;
+}
+
+.inputInvalid{
+    border: none;
+    border-radius: 10px;
+    height: 25px;
+    width: -webkit-fill-available;
+    background-color: #ff98b059;
+}
+
+#DriversloginForm button{
+    color: #f9f9f9;
+    width: 110px;
+    background-color: #ff6392;
+    border: none;
+    height: 28px;
+    border-radius: 10px;
+    font-size: small;
+}
+
+.formText{
+    color: #f9f9f9;
+    font-size: small;
+    text-decoration: none;
+}
+
+#imgLoginDrivers{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+
+#imgLoginDrivers img{
+    width: 36vh;
+}
+
+.imgNameLogo{
+    width: 80%;
+}
+
+.btn-proceed, .btn-cancel{
+    font-size: small;
+    border-radius: 20px;
+    width: 6rem;
+    color: #f9f9f9;
+    border: none;
+}
+
+.btn-proceed{
+    background-color: #06d6a0 ;
+}
+
+.btn-cancel{
+    background-color: #ef476f;
+}
+
+.btn-invalid{
+    background-color: #06d69e60;
+    color: #f9f9f973;
+    font-size: small;
+    border-radius: 20px;
+    width: 6rem;
+    color: #f9f9f9;
+    border: none;
+}
+#driversSignUpForm{
+    padding: 0;
+}
+#driversSignUpForm input, textarea{
+    width: -webkit-fill-available;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    margin-top: 7px;
+}
+
+#driversSignUpForm textarea{
+    margin-top: 7px;
+}
+
+#driversSignUpForm label{
+    color: gray;
+    font-size: medium;
+    margin-top: 7px;
+}
+
+#driversSignUpForm input::placeholder{
+    color: lightgray;
+    font-size: small;
+}
+
+.singUpTitle{
+    display: flex;
+    justify-content: center;
+    color: gray;
+
+}
+
